@@ -1,0 +1,16 @@
+{
+    "name": "gohan",
+    "dependencies": {
+        "ags": "/usr/share/ags/js"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.10",
+        "typescript": "~5.7.3"
+    },
+    "scripts": {
+        "dev": "nodemon --watch ./src -e ts,tsx,scss --exec ./scripts/dev.sh",
+        "build": "./scripts/build.sh",
+        "postbuild": "./scripts/postbuild.sh && ./scripts/install.sh",
+        "installbin": "./scripts/install.sh"
+    }
+}
