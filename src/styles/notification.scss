@@ -1,0 +1,51 @@
+@use "./colors.scss" as *;
+
+window.NotificationWindow {
+    background: transparent;
+    padding-bottom: 1rem;
+}
+
+box.NotificationItem {
+    color: $primary;
+    background-color: $background;
+    min-width: 300px;
+    padding: 0rem 0.5rem;
+
+    box.Header {
+        border-bottom: 1px solid $on_tertiary_fixed_variant;
+
+        box.HeaderRight {
+            label.HeaderTime {
+                font-size: 14px;
+            }
+
+            button.CloseButton {
+                label {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    box.Body {
+        min-height: 50px;
+
+        label.Summary {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        label.Body {
+            font-size: 13px;
+        }
+    }
+
+    box.Footer {
+        min-height: 1px;
+    }
+
+    &.Critical {
+        background-color: $primary;
+        color: $on_primary;
+    }
+}
