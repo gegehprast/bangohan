@@ -44,12 +44,10 @@ const NotificationItem = ({ notification }: { notification: Notification }) => {
                 const mouseEnter = new Gtk.EventControllerMotion()
 
                 mouseEnter.connect("enter", () => {
-                    console.log("enter")
                     notification.stopTicking()
                 })
 
                 mouseEnter.connect("leave", () => {
-                    console.log("leave")
                     notification.startTicking()
                 })
 

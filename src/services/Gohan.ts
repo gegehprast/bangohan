@@ -13,14 +13,12 @@ export class Gohan {
     }
 
     async start() {
-        console.log("Gohan service is starting...")
 
         // Theme
         await this.Theme.start()
     }
 
     async stop() {
-        console.log("Gohan service is stopping...")
 
         // Theme
         await this.Theme.stop()

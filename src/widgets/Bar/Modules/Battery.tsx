@@ -40,8 +40,6 @@ const Battery = () => {
         async function init() {
             const profile = await getPowerProfile()
 
-            console.log(profile)
-
             setActiveProfile(profile)
         }
 
