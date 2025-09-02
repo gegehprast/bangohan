@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Make executable
-chmod +x build/bangohan
+chmod +x build/gohan
 
 # Copy the styles to the build directory
 rm -rf build/styles

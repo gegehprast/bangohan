@@ -8,7 +8,7 @@ import NotificationWindow from "./widgets/Notification/NotificationWindow"
 Gohan.start()
 
 app.start({
-    instanceName: "BanGohan",
+    instanceName: "Gohan",
     gtkTheme: "Adwaita",
     main() {
         const theme = new Theme()

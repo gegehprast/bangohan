@@ -6,7 +6,7 @@ import app from "ags/gtk4/app"
 import { monitorFile } from "ags/file"
 
 class Theme implements Service {
-    public dir: string = `${GLib.get_home_dir()}/.local/share/bangohan/styles`
+    public dir: string = `${GLib.get_home_dir()}/.local/share/gohan/styles`
 
     public colors: string = `${this.dir}/colors.scss`
 
@@ -32,14 +32,14 @@ class Theme implements Service {
     }
 
     private async compileSass() {
-        const scss = `${GLib.get_home_dir()}/.local/share/bangohan/styles/styles.scss`
-        const css = `${GLib.get_home_dir()}/.local/share/bangohan/styles/styles.css`
+        const scss = `${GLib.get_home_dir()}/.local/share/gohan/styles/styles.scss`
+        const css = `${GLib.get_home_dir()}/.local/share/gohan/styles/styles.css`
 
         await execAsync(`sass ${scss} ${css}`).catch(console.error)
     }
 
     private applyTheme() {
-        const css = `${GLib.get_home_dir()}/.local/share/bangohan/styles/styles.css`
+        const css = `${GLib.get_home_dir()}/.local/share/gohan/styles/styles.css`
 
         app.apply_css(css, true)
     }
