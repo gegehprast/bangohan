@@ -1,0 +1,24 @@
+@use "./colors.scss" as *;
+
+menubutton.VolumeMenu {
+    button.SpeakerButton {
+        label {
+            color: $primary;
+        }
+
+        &.Active {
+            label {
+                text-decoration: underline;
+                color: $primary_fixed;
+            }
+        }
+        
+        &:not(.Active) {
+            &:hover {
+                label {
+                    color: $primary_fixed;
+                }
+            }
+        }
+    }
+}
