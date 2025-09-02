@@ -59,8 +59,8 @@ const Battery = () => {
                         cssClasses={["icon", "Icon"]}
                     />
                     <label
-                        label={createBinding(bat, "batteryLevel").as(
-                            (v) => `${(v * 100).toFixed(0)}%`
+                        label={createBinding(bat, "percentage").as(
+                            (p) => p.toString() + "%"
                         )}
                         cssClasses={["Percentage"]}
                     />
