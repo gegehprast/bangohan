@@ -2,6 +2,7 @@ import Battery from "./Modules/Battery"
 import Time from "./Modules/Time"
 import Volume from "./Modules/Volume"
 import { Gtk } from "ags/gtk4"
+import Network from "./Modules/Network"
 
 const Right = () => {
     return (
@@ -13,6 +14,8 @@ const Right = () => {
             valign={Gtk.Align.CENTER}
             spacing={10}
         >
+            <Network />
+
             <Volume />
 
             <Battery />
