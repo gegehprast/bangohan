@@ -1,7 +1,7 @@
 import { Gtk } from "ags/gtk4"
-import Gohan from "../../../services/Gohan"
 import AstalTray from "gi://AstalTray?version=0.1"
 import { createBinding, For } from "ags"
+import { Cursor } from "../../../misc/Cursor"
 
 function getSearchWith(item: AstalTray.TrayItem) {
     const title = item.title
@@ -75,7 +75,7 @@ const Tray = () => {
                 {(item) => (
                     <menubutton
                         $={(self) => init(self, item)}
-                        cursor={Gohan.Cursor.POINTER}
+                        cursor={Cursor.POINTER}
                         tooltipMarkup={getTooltipMarkup(item)}
                         cssClasses={["TrayMenuButton"]}
                         halign={Gtk.Align.CENTER}

@@ -1,8 +1,8 @@
-import Gohan from "../../../services/Gohan"
 import { createBinding, createState, For, onMount } from "ags"
 import { Gtk } from "ags/gtk4"
 import AstalBattery from "gi://AstalBattery?version=0.1"
 import { execAsync } from "ags/process"
+import { Cursor } from "../../../misc/Cursor"
 
 export type PowerProfile = "power-saver" | "balanced" | "performance"
 
@@ -50,7 +50,7 @@ const Battery = () => {
         <box
             cssClasses={["Battery"]}
             hexpand={true}
-            cursor={Gohan.Cursor.POINTER}
+            cursor={Cursor.POINTER}
         >
             <menubutton cssClasses={["BatteryMenu"]}>
                 <box spacing={5}>

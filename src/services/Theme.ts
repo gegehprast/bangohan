@@ -1,11 +1,10 @@
 import Gio from "gi://Gio?version=2.0"
-import { Service } from "./Gohan"
 import GLib from "gi://GLib?version=2.0"
 import { execAsync } from "ags/process"
 import app from "ags/gtk4/app"
 import { monitorFile } from "ags/file"
 
-class Theme implements Service {
+class Theme {
     public dir: string = `${GLib.get_home_dir()}/.local/share/gohan/styles`
 
     public colors: string = `${this.dir}/colors.scss`

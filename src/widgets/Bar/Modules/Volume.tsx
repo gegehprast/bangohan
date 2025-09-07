@@ -1,7 +1,7 @@
 import AstalWp from "gi://AstalWp?version=0.1"
-import Gohan from "../../../services/Gohan"
 import { createBinding, For } from "ags"
 import { Gtk } from "ags/gtk4"
+import { Cursor } from "../../../misc/Cursor"
 
 const wp = AstalWp.get_default()
 
@@ -12,7 +12,7 @@ const Volume = () => {
         <box
             cssClasses={["Volume"]}
             hexpand={true}
-            cursor={Gohan.Cursor.POINTER}
+            cursor={Cursor.POINTER}
         >
             <menubutton cssClasses={["VolumeMenu"]}>
                 <box spacing={5}>

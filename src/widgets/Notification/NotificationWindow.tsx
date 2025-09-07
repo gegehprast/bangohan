@@ -3,7 +3,7 @@ import { createComputed, createState, For, onCleanup } from "ags"
 import AstalNotifd from "gi://AstalNotifd?version=0.1"
 import NotificationItem from "./NotificationItem"
 import Notification from "../../services/Notification"
-import Gohan from "../../services/Gohan"
+import { Cursor } from "../../misc/Cursor"
 
 const notifd = AstalNotifd.get_default()
 
@@ -86,7 +86,7 @@ const NotificationWindow = ({ gdkmonitor }: { gdkmonitor: Gdk.Monitor }) => {
                         onClicked={() => {
                             setNotifications([])
                         }}
-                        cursor={Gohan.Cursor.POINTER}
+                        cursor={Cursor.POINTER}
                         hexpand={true}
                     >
                         Close All
@@ -102,7 +102,7 @@ const NotificationWindow = ({ gdkmonitor }: { gdkmonitor: Gdk.Monitor }) => {
                             const notifications = notifd.get_notifications()
                             notifications.forEach((n) => n.dismiss())
                         }}
-                        cursor={Gohan.Cursor.POINTER}
+                        cursor={Cursor.POINTER}
                         hexpand={true}
                     >
                         Dismiss All

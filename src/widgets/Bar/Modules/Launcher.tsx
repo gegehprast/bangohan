@@ -1,5 +1,5 @@
 import { execAsync } from "ags/process"
-import Gohan from "../../../services/Gohan"
+import { Cursor } from "../../../misc/Cursor"
 
 const Launcher = () => {
     return (
@@ -11,7 +11,7 @@ const Launcher = () => {
                     )
                 }}
                 tooltipText={"Launcher"}
-                cursor={Gohan.Cursor.POINTER}
+                cursor={Cursor.POINTER}
             >
                 <label
                     cssClasses={["icon"]}

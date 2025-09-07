@@ -1,5 +1,5 @@
 import { createState, State } from "ags"
-import { interval, Time } from "ags/time"
+import { interval, Timer } from "ags/time"
 import AstalNotifd from "gi://AstalNotifd?version=0.1"
 
 const TICK = 10
@@ -14,7 +14,7 @@ class Notification {
 
     private dismisser: (id: number) => void
 
-    private interval?: Time
+    private interval?: Timer
 
     constructor(
         id: number,

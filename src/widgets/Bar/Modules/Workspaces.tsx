@@ -1,7 +1,7 @@
 import { Gtk } from "ags/gtk4"
 import { Accessor, createBinding, createComputed, For } from "ags"
 import AstalHyprland from "gi://AstalHyprland?version=0.1"
-import Gohan from "../../../services/Gohan"
+import { Cursor } from "../../../misc/Cursor"
 
 interface GohanWorkspace {
     real: AstalHyprland.Workspace
@@ -100,8 +100,8 @@ const WorkspaceButton = ({ workspace }: WorkspaceButtonProps) => {
         workspace.real.name === "10" ? "0" : workspace.real.name
     const tooltipText = `Switch to workspace ${workspaceName}`
     const cursor = workspace.focused
-        ? Gohan.Cursor.DEFAULT
-        : Gohan.Cursor.POINTER
+        ? Cursor.DEFAULT
+        : Cursor.POINTER
 
     return (
         <button
