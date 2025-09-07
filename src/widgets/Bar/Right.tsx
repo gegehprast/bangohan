@@ -12,7 +12,7 @@ const Right = () => {
             hexpand={true}
             halign={Gtk.Align.END}
             valign={Gtk.Align.CENTER}
-            spacing={10}
+            spacing={15}
         >
             <Network />
 
