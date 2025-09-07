@@ -60,7 +60,7 @@ const Battery = () => {
                     />
                     <label
                         label={createBinding(bat, "percentage").as(
-                            (p) => p.toString() + "%"
+                            (p) => `${Math.floor(p * 100)}%`
                         )}
                         cssClasses={["Percentage"]}
                     />
