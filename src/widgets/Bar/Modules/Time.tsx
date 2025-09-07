@@ -4,7 +4,7 @@ const Time = () => {
     const datetime = createPoll(
         "Hello",
         1000,
-        "date +'%b %d, %H:%M'",
+        "date +'%a, %b %d, %H:%M'",
         (output) => {
             return output.trim()
         }
