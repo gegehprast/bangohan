@@ -18,17 +18,16 @@ function toTitleCase(str: string) {
 }
 
 function getTooltipMarkup(item: AstalTray.TrayItem) {
-    // yeah can use this to get the tooltip markup
-    return toTitleCase(getSearchWith(item))
+    return item.tooltipMarkup ? item.tooltipMarkup : item.title
 }
 
 const CUSTOM_ICONS: Record<string, string> = {
-    discord: "",
-    steam: "",
-    spotify: "",
+    discord: "discord",
+    steam: 'steam',
+    spotify: "spotify",
 }
 
-const USE_CUSTOM_ICONS: RegExp[] = [/steam/i, /discord/i, /spotify/i]
+const USE_CUSTOM_ICONS: RegExp[] = [/steam/i]
 
 function shouldUseCustomIcon(searchWith: string) {
     return USE_CUSTOM_ICONS.some((regex) => searchWith.match(regex))
@@ -95,13 +94,13 @@ const ImageIcon = ({ item }: { item: AstalTray.TrayItem }) => {
 
     if (customIcon) {
         return (
-            <label cssClasses={["icon", "TrayLabelIcon"]} label={customIcon} />
+            <image iconName={customIcon} cssClasses={["icon", "TrayImageIcon"]} pixelSize={16} />
         )
     }
 
     return (
         <image
-            gicon={item.gicon}
+            gicon={createBinding(item, "gicon")}
             cssClasses={["icon", "TrayImageIcon"]}
             pixelSize={16} // Don't foget to adjust .TrayLabelIcon style too
         />
