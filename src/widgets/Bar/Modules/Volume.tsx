@@ -9,11 +9,7 @@ const Volume = () => {
     const speakers = createBinding(wp.audio, "speakers")
 
     return (
-        <box
-            cssClasses={["Volume"]}
-            hexpand={true}
-            cursor={Cursor.POINTER}
-        >
+        <box cssClasses={["Volume"]} hexpand={true} cursor={Cursor.POINTER}>
             <menubutton cssClasses={["VolumeMenu"]}>
                 <box spacing={5}>
                     <image
